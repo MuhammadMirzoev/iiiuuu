@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="exponents">
+        <h1 class="exponent__title">ЭКСПОНЕНТЫ</h1>
+    </section>
+
+    <section class="exponents__main__box">
+        <div class="exponents__main__row">
+            <div class="dropdown exponents_region">
+                <button class="dropbtn">Регион</button>
+                <div class="dropdown-content">
+                    {% for item in filter_region %}
+                        <a href="/exponents/{{ item[1] }}">{{ item[0] }}</a>
+                    {% endfor %}
+            </div></div>
+            <div class="exponents_uch">
+                <h2>Участник</h2>
+            </div>
+            <div class="exponents_por">
+                <h2>Порода</h2>
+            </div>
+        </div>
+        {% for item in data %}
+            <div class="exponents__main__row">
+                <div class="exponents_region">
+                    <h2>{{ item.region }}</h2>
+                </div>
+                <div class="exponents_uch">
+                    <h2>{{ item.name }}</h2>
+                </div>
+                <div class="exponents_por">
+                    <h2>{{ item.description }}</h2>
+                </div>
+            </div>
+        {% endfor %}
+
+
+    </section>
+
+
+
+
+
+
+{% endblock %}

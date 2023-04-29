@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/css/test.css"/>
+    <title>Title</title>
+</head>
+<body>
+
+
+<nav id="navbar" class="navbar">
+
+    <div class="nav_bar_logo">
+         <section class="lead">
+            <img src="/static/img/logo.png" class="lead__logo" alt="XXIII Российская выставка племенных овец и коз">
+            <h1 class="lead__title"><a class="lead__link" href="index">XXIII Российская выставка племенных овец и
+                коз</a>
+            </h1>
+        </section>
+    </div>
+    <div class="container">
+        <a href="/" class="navbar__brand" target="_blank">XXIII</a>
+        <ul class="navbar__nav">
+            <li><a href="#">О выставке</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Портфолио</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="header"
+        style="background-image: url(https://beautiful-photo.net/wp-content/uploads/2018/10/Mount-Fitz-Roy-and-laguna-Torre-Los-Glaciares-National-Park-Patagonia-Argentina.jpg);">
+    <div class="container">
+        <h1 class="header__title">Какой-то заголовок экрана</h1>
+    </div>
+
+    <div class="header__overlay"></div>
+</header>
+
+
+<script>
+    // Сразу создаём переменные
+    let navbar = document.getElementById('navbar').classList
+    let active_class = "navbar_scrolled"
+
+    /**
+     * Слушаем событие прокрутки
+     */
+    window.addEventListener('scroll', e => {
+        console.log(pageYOffset)
+        if (pageYOffset > 750) navbar.add(active_class)
+        else navbar.remove(active_class)
+    })
+</script>
+</body>
+</html>

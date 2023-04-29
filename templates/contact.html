@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <br>
+    <section class="contact_section">
+        <article class="contact">
+            <h1 class="contact__title">КОНТАКТЫ</h1>
+            <p class="contact__text">Республика Дагестан, г. Каспийск, пр-кт Акулиничева д. 21, стадион «Анжи-
+                Арена».</p>
+            <p class="contact__text">С 16 по 19 мая 2023 года</p>
+            <p class="contact__text">E-mail: <a href="#" class="contact__link">vystavka@fancrd.ru</a></p>
+            <p class="contact__text">тел. +7 928 522-49-16</p>
+            <p class="contact__text">+7 928 805-19-25</p>
+            <p class="contact__text">Пресс-служба: +7 928 872 15 08</p>
+            <p class="contact__text">Время посещения: с 10:00 до 18:00 часов все дни выставки.</p>
+            <p class="contact__text">Наш телеграм канал: <a class="telegram__link"
+                                                            href="https://t.me/vystavka_ovec"><img
+                    src="/static/img/Telegram_logo.svg"
+                    class="telegram__logo"></a></p>
+        </article>
+        <article>
+            <form class="contact-form" id="contact-form_1" method="POST" enctype="multipart/form-data">
+                <p class="contact-form__title">Оставьте заявку и мы с вами свяжемся</p>
+                <p class="contact-form__description"></p>
+                <div class="contact-form__input-wrapper">
+                    <input name="name" type="text" class="contact-form__input"
+                           placeholder="Введите ваше имя">
+                    <div class="contact-form__error"></div>
+                </div>
+
+                <div class="contact-form__input-wrapper">
+                    <input name="tel" type="tel" class="contact-form__input"
+                           placeholder="Введите ваш телефон">
+                    <div class="contact-form__error"></div>
+                </div>
+
+                <div class="contact-form__input-wrapper">
+                    <input name="user_text" type="text" class="contact-form__input"
+                           placeholder="Какой у вас вопрос?">
+                    <div class="contact-form__error"></div>
+                </div>
+                <button class="contact-form__button" type="submit">Отправить вопрос</button>
+            </form>
+        </article>
+    </section>
+
+
+    {#                #}
+
+{% endblock %}
